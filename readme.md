@@ -121,4 +121,5 @@ Check out the build and hardware photos in the [gallery folder](./gallery):
 
 - [ ] Add layout configuration
 - [ ] Add case 3D model files (STL / STEP files for 3D printing)
+- [ ] Add link to keycaps 3D model
 - [ ] Add complete components list & Bill of Materials (BOM) (switches, diodes, RP2040 board, hardware/screws)
