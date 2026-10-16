@@ -114,3 +114,11 @@ Check out the build and hardware photos in the [gallery folder](./gallery):
 * [IMG_3382.jpg](./gallery/IMG_3382.jpg)
 * [IMG_3383.jpg](./gallery/IMG_3383.jpg)
 * [IMG_3386.jpg](./gallery/IMG_3386.jpg)
+
+---
+
+## To-Do
+
+- [ ] Add layout configuration
+- [ ] Add case 3D model files (STL / STEP files for 3D printing)
+- [ ] Add complete components list & Bill of Materials (BOM) (switches, diodes, RP2040 board, hardware/screws)
