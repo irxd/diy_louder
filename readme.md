@@ -24,6 +24,7 @@ I personally designed and 3D modeled the case from scratch, which was also my fi
 * **Bootloader**: RP2040 (`.uf2`)
 * **Diode Direction**: `COL2ROW`
 * **Features Enabled**: Bootmagic, Extrakey (Media controls), Mousekey, NKRO
+* **License**: [GPL-2.0-or-later](./LICENSE)
 
 ### Pinout Configuration
 
@@ -185,4 +186,10 @@ Check out the build and hardware photos in the [gallery folder](./gallery):
 * [IMG_3382.jpg](./gallery/IMG_3382.jpg)
 * [IMG_3383.jpg](./gallery/IMG_3383.jpg)
 * [IMG_3386.jpg](./gallery/IMG_3386.jpg)
+
+---
+
+## License
+
+This project is licensed under the [GNU General Public License v2.0 or later (GPL-2.0-or-later)](./LICENSE).
 
