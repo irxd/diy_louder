@@ -4,7 +4,7 @@
 
 A 4x12 (48-key) ortholinear mechanical keyboard powered by an RP2040 microcontroller running QMK firmware.
 
-📁 **[View more photos in the Gallery](./gallery)**
+📁 **[3D Models](./model)** • 📷 **[View more photos in the Gallery](./gallery)**
 
 ---
 
@@ -29,6 +29,43 @@ I personally designed and 3D modeled the case from scratch, which was also my fi
 
 * **Rows (4)**: `GP0`, `GP1`, `GP2`, `GP3`
 * **Cols (12)**: `GP4`, `GP5`, `GP6`, `GP7`, `GP8`, `GP9`, `GP15`, `GP14`, `GP13`, `GP12`, `GP11`, `GP10`
+
+---
+
+## Bill of Materials (BOM)
+
+| Component | Quantity | Price (IDR) | Price (USD) | Notes |
+| :--- | :---: | :---: | :---: | :--- |
+| **Kailh Choc v1 Brown** low-profile switches | 47 | Rp352.500 | $19.53 | Tactile low-profile switches |
+| **Raspberry Pi Pico RP2040** | 1 | Rp42.500 | $2.35 | Microcontroller board |
+| **M3x16 Hex Screws** | 20 | Rp11.000 | $0.61 | Case assembly & plate mounting |
+| **Rubber Feet** (20×3×3 mm) | 4 | Rp8.000 | $0.44 | Non-slip base pads |
+| **1N4148 Diodes** | 47 | Rp4.700 | $0.26 | Anti-ghosting switching diodes |
+| **Copper Wire** (1.3 mm) | 1 | Rp11.400 | $0.63 | Matrix column/row wiring |
+| **Jumper Wires** | 1 | Rp9.975 | $0.55 | Controller-to-matrix connections |
+| **Total** | | **Rp440.075** | **~$24.37** | *(excluding 3D printing filament/case)* |
+
+---
+
+## 3D Models & Printing
+
+All 3D files for the case are available in the [`model/`](./model) folder:
+
+### Case Parts
+* **CAD Source**: [`diy-louder.step`](./model/diy-louder.step) (full assembly STEP file for CAD inspection or customization)
+* **Switch Plates**:
+  * Left plate: [`plate-left.stl`](./model/plate-left.stl)
+  * Right plate: [`plate-right.stl`](./model/plate-right.stl)
+* **Frame & Structural Hardware**:
+  * Corner: [`corner.stl`](./model/corner.stl)
+  * Bridge: [`bridge.stl`](./model/bridge.stl)
+  * Front Bridge: [`front-bridge.stl`](./model/front-bridge.stl)
+  * Connector: [`connector.stl`](./model/connector.stl)
+  * Spacer: [`spacer.stl`](./model/spacer.stl)
+
+### Keycaps
+The keycaps used in this project are the **Choc Louder Keycaps (Choc and MX spacing)**:
+* 🔗 Download on Printables: [Choc Louder Keycaps (Choc and MX spacing)](https://www.printables.com/model/1066117-choc-louder-keycaps-choc-and-mx-spacing)
 
 ---
 
@@ -97,13 +134,47 @@ Choose either method below:
 
 ## Keymap Layers
 
-The default keymap includes 3 layers:
+The keymap runs a 4x12 ortholinear layout with 3 layers configured in [`keymaps/default/keymap.c`](./keymaps/default/keymap.c). It is personally optimized for **macOS** and **coding workflows**, featuring quick access to programming brackets/symbols (`()`, `[]`, `{}`), macOS native shortcuts (such as screen captures `Cmd+Shift+3/4/5`), function keys, and navigation without lifting hands from the home row.
 
-* **Base (`_BASE`)**: Standard 4x12 QWERTY ortholinear layout. Space keys are split, flanked by `RAISE` and `LOWER` momentary layer toggles.
-* **Raise (`_RAISE`)**: Access to number row (`1`–`0`), minus/equal keys, and function keys (`F1`–`F11`).
-* **Lower (`_LOWER`)**: Access to symbols, brackets/braces (`()`, `[]`, `{}`), macOS screenshot shortcuts (`Cmd+Shift+3/4/5`), volume control, and media playback keys (`Play/Pause`, `Prev`, `Next`).
+### Layer 0: Base (`_BASE`)
 
-Custom keymaps can be configured in [`keymaps/default/keymap.c`](./keymaps/default/keymap.c).
+Standard QWERTY ortholinear layout with split Space, dedicated arrow cluster, and momentary layer switches (`RAISE` and `LOWER`).
+
+| Row | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **0** | `Esc` | `Q` | `W` | `E` | `R` | `T` | `Y` | `U` | `I` | `O` | `P` | `Backspace` |
+| **1** | `Tab` | `A` | `S` | `D` | `F` | `G` | `H` | `J` | `K` | `L` | `;` | `'` |
+| **2** | `Shift` | `Z` | `X` | `C` | `V` | `B` | `N` | `M` | `,` | `.` | `↑` | `Enter` |
+| **3** | `Ctrl` | `Alt` | `F12` | `Cmd/GUI` | **RAISE** | `Space` | `Space` | **LOWER** | `/` | `←` | `↓` | `→` |
+
+---
+
+### Layer 1: Raise (`_RAISE`)
+
+Activated by holding **RAISE**. Provides access to function keys (`F1`–`F11`), number row (`1`–`0`), and minus/equal.
+
+| Row | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **0** | `F1` | `F2` | `F3` | `F4` | `F5` | `F6` | `F7` | `F8` | `F9` | `F10` | `F11` | `Backspace` |
+| **1** | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9` | `0` | `-` | `=` |
+| **2** | `Shift` | `▽` | `▽` | `▽` | `▽` | `▽` | `▽` | `▽` | `▽` | `▽` | `▽` | `Enter` |
+| **3** | `▽` | `▽` | `▽` | `▽` | `—` | `▽` | `▽` | `▽` | `▽` | `▽` | `▽` | `▽` |
+
+---
+
+### Layer 2: Lower (`_LOWER`)
+
+Activated by holding **LOWER**. Provides symbols, brackets, macOS screenshot shortcuts (`Cmd+Shift+3/4/5`), volume control, and media playback keys.
+
+| Row | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **0** | `` ` `` | `\` | `▽` | `▽` | `▽` | `▽` | `▽` | `▽` | `▽` | `▽` | `▽` | `Backspace` |
+| **1** | `▽` | `▽` | `Cmd+Shift+3` | `Cmd+Shift+4` | `Cmd+Shift+5` | `▽` | `(` | `)` | `[` | `]` | `{` | `}` |
+| **2** | `▽` | `▽` | `▽` | `▽` | `▽` | `▽` | `▽` | `▽` | `▽` | `▽` | `Vol Up` | `Enter` |
+| **3** | `▽` | `▽` | `▽` | `▽` | `▽` | `▽` | `▽` | `—` | `Play/Pause` | `Prev Track` | `Vol Down` | `Next Track` |
+
+> [!NOTE]
+> `▽` indicates a transparent key (`_______`) in QMK that passes through to the underlying Base layer.
 
 ---
 
@@ -115,11 +186,3 @@ Check out the build and hardware photos in the [gallery folder](./gallery):
 * [IMG_3383.jpg](./gallery/IMG_3383.jpg)
 * [IMG_3386.jpg](./gallery/IMG_3386.jpg)
 
----
-
-## To-Do
-
-- [ ] Add layout configuration
-- [ ] Add case 3D model files (STL / STEP files for 3D printing)
-- [ ] Add link to keycaps 3D model
-- [ ] Add complete components list & Bill of Materials (BOM) (switches, diodes, RP2040 board, hardware/screws)
