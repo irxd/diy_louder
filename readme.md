@@ -38,7 +38,7 @@ I personally designed and 3D modeled the case from scratch, which was also my fi
 | :--- | :---: | :---: | :---: | :--- |
 | **Kailh Choc v1 Brown** low-profile switches | 47 | Rp352.500 | $19.53 | Tactile low-profile switches |
 | **Raspberry Pi Pico RP2040** | 1 | Rp42.500 | $2.35 | Microcontroller board |
-| **M3x16 Hex Screws** | 20 | Rp11.000 | $0.61 | Case assembly & plate mounting |
+| **M3x10 Hex Screws** | 20 | Rp11.000 | $0.61 | Case assembly & plate mounting |
 | **Rubber Feet** (20×3×3 mm) | 4 | Rp8.000 | $0.44 | Non-slip base pads |
 | **1N4148 Diodes** | 47 | Rp4.700 | $0.26 | Anti-ghosting switching diodes |
 | **Copper Wire** (1.3 mm) | 1 | Rp11.400 | $0.63 | Matrix column/row wiring |
