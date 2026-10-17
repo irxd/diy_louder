@@ -2,7 +2,7 @@
 
 ![diy_louder](gallery/IMG_3381.jpg)
 
-A 4x12 (48-key) ortholinear mechanical keyboard powered by an RP2040 microcontroller running QMK firmware.
+A 4x12 (47-key) ortholinear mechanical keyboard powered by an RP2040 microcontroller running QMK firmware.
 
 📁 **[3D Models](./model)** • 📷 **[View more photos in the Gallery](./gallery)**
 
@@ -19,7 +19,7 @@ I personally designed and 3D modeled the case from scratch, which was also my fi
 ## Specifications
 
 * **Keyboard Maintainer**: [irxd](https://github.com/irxd)
-* **Form Factor**: 4x12 Ortholinear (48 keys)
+* **Form Factor**: 4x12 Ortholinear (47 keys)
 * **Microcontroller**: Raspberry Pi RP2040
 * **Bootloader**: RP2040 (`.uf2`)
 * **Diode Direction**: `COL2ROW`
@@ -138,14 +138,14 @@ The keymap runs a 4x12 ortholinear layout with 3 layers configured in [`keymaps/
 
 ### Layer 0: Base (`_BASE`)
 
-Standard QWERTY ortholinear layout with split Space, dedicated arrow cluster, and momentary layer switches (`RAISE` and `LOWER`).
+Standard QWERTY ortholinear layout with a centered 2u Spacebar, dedicated arrow cluster, and momentary layer switches (`RAISE` and `LOWER`).
 
 | Row | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **0** | `Esc` | `Q` | `W` | `E` | `R` | `T` | `Y` | `U` | `I` | `O` | `P` | `Backspace` |
 | **1** | `Tab` | `A` | `S` | `D` | `F` | `G` | `H` | `J` | `K` | `L` | `;` | `'` |
 | **2** | `Shift` | `Z` | `X` | `C` | `V` | `B` | `N` | `M` | `,` | `.` | `↑` | `Enter` |
-| **3** | `Ctrl` | `Alt` | `F12` | `Cmd/GUI` | **RAISE** | `Space` | `Space` | **LOWER** | `/` | `←` | `↓` | `→` |
+| **3** | `Ctrl` | `Alt` | `F12` | `Cmd/GUI` | **RAISE** | `Space (2u)` | `Space (2u)` | **LOWER** | `/` | `←` | `↓` | `→` |
 
 ---
 
