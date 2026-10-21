@@ -1,6 +1,6 @@
 # diy_louder
 
-![diy_louder](gallery/IMG_3381.jpg)
+![diy_louder](gallery/IMG_3397.jpg)
 
 A 4x12 (47-key) ortholinear mechanical keyboard powered by an RP2040 microcontroller running QMK firmware.
 
@@ -182,10 +182,10 @@ Activated by holding **LOWER**. Provides symbols, brackets, macOS screenshot sho
 ## Gallery
 
 Check out the build and hardware photos in the [gallery folder](./gallery):
-* [IMG_3381.jpg](./gallery/IMG_3381.jpg)
-* [IMG_3382.jpg](./gallery/IMG_3382.jpg)
-* [IMG_3383.jpg](./gallery/IMG_3383.jpg)
-* [IMG_3386.jpg](./gallery/IMG_3386.jpg)
+* [IMG_3397.jpg](./gallery/IMG_3397.jpg)
+* [IMG_3398.jpg](./gallery/IMG_3398.jpg)
+* [IMG_3399.jpg](./gallery/IMG_3399.jpg)
+* [IMG_3400.jpg](./gallery/IMG_3400.jpg)
 
 ---
 
